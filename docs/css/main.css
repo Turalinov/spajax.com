@@ -1050,3 +1050,35 @@ button:focus {
 .preview__img-elem {
   width: 100%;
 }
+
+.slogan {
+  padding: 100px 0 145px;
+  background-color: var(--clr-200);
+  background-image: url("../img/lines-all.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 768px) {
+  .slogan {
+    padding: 106px 0 122px;
+  }
+}
+
+.slogan__title {
+  position: relative;
+  text-align: center;
+}
+.slogan__title::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -70px;
+  width: 14px;
+  height: 58px;
+  background-image: url("../img/decor-v.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
