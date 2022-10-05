@@ -751,6 +751,79 @@ button:focus {
   }
 }
 
+.experts {
+  padding: 115px 0 100px;
+}
+@media screen and (max-width: 768px) {
+  .experts {
+    padding: 100px 0 100px;
+  }
+}
+
+.experts__title {
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .experts__title {
+    margin-bottom: 25px;
+  }
+}
+
+.experts__item {
+  font-family: "Bodoni", sans-serif;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+}
+
+.experts__img {
+  min-width: 270px;
+  height: 420px;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 992px) {
+  .experts__img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .experts__img {
+    order: 30;
+    height: 397px;
+    margin-bottom: initial;
+  }
+}
+
+.experts__img-elem {
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.experts__fullname {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  .experts__fullname {
+    font-size: 36px;
+    margin-bottom: 26px;
+    order: 10;
+  }
+}
+
+.experts__position {
+  font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  .experts__position {
+    margin-bottom: 26px;
+    order: 20;
+    min-height: 50px;
+  }
+}
+
 .hero {
   background-color: var(--clr-gray5);
   background-image: url("../img/hero-bg.png");
@@ -1049,6 +1122,137 @@ button:focus {
 
 .preview__img-elem {
   width: 100%;
+}
+
+.slider {
+  position: relative;
+}
+
+.swiper {
+  position: initial;
+}
+
+.slider-button-prev,
+.slider-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 15px;
+  overflow: hidden;
+  z-index: 10;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .slider-button-prev,
+.slider-button-next {
+    top: initial;
+    transform: initial;
+    bottom: 0;
+    background-color: var(--clr-203);
+    width: 66px;
+    height: 66px;
+  }
+}
+.slider-button-prev::after, .slider-button-prev::before,
+.slider-button-next::after,
+.slider-button-next::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (max-width: 768px) {
+  .slider-button-prev::after, .slider-button-prev::before,
+.slider-button-next::after,
+.slider-button-next::before {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 28px;
+  }
+}
+.slider-button-prev::after,
+.slider-button-next::after {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+@media screen and (max-width: 768px) {
+  .slider-button-prev:hover,
+.slider-button-next:hover {
+    background-color: var(--clr-210);
+  }
+}
+.slider-button-prev:hover::after,
+.slider-button-next:hover::after {
+  opacity: 1;
+}
+.slider-button-prev.swiper-button-disabled,
+.slider-button-next.swiper-button-disabled {
+  opacity: 0.8;
+}
+.slider-button-prev.swiper-button-disabled:hover::after,
+.slider-button-next.swiper-button-disabled:hover::after {
+  opacity: 0;
+}
+
+.slider-button-next {
+  right: -30px;
+  left: auto;
+}
+@media screen and (max-width: 768px) {
+  .slider-button-next {
+    right: 0;
+  }
+}
+.slider-button-next::after {
+  background-image: url("../img/arrow-right-hover.svg");
+}
+@media screen and (max-width: 768px) {
+  .slider-button-next::after {
+    background-image: url("../img/arrow-right-big-hover.svg");
+  }
+}
+.slider-button-next::before {
+  background-image: url("../img/arrow-right.svg");
+}
+@media screen and (max-width: 768px) {
+  .slider-button-next::before {
+    background-image: url("../img/arrow-right-big.svg");
+  }
+}
+
+.slider-button-prev {
+  left: -30px;
+  right: auto;
+}
+@media screen and (max-width: 768px) {
+  .slider-button-prev {
+    left: 0;
+  }
+}
+.slider-button-prev::after {
+  background-image: url("../img/arrow-left-hover.svg");
+}
+@media screen and (max-width: 768px) {
+  .slider-button-prev::after {
+    background-image: url("../img/arrow-left-big-hover.svg");
+  }
+}
+.slider-button-prev::before {
+  background-image: url("../img/arrow-left.svg");
+}
+@media screen and (max-width: 768px) {
+  .slider-button-prev::before {
+    background-image: url("../img/arrow-left-big.svg");
+  }
 }
 
 .slogan {
