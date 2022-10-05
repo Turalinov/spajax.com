@@ -779,7 +779,6 @@ button:focus {
 
 .experts__img {
   min-width: 270px;
-  height: 420px;
   margin-bottom: 40px;
 }
 @media screen and (max-width: 992px) {
@@ -790,7 +789,6 @@ button:focus {
 @media screen and (max-width: 768px) {
   .experts__img {
     order: 30;
-    height: 397px;
     margin-bottom: initial;
   }
 }
