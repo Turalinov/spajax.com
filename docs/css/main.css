@@ -1094,6 +1094,65 @@ button:focus {
   color: var(--clr-white);
 }
 
+.testimonials {
+  padding: 56px 0 120px;
+}
+@media screen and (max-width: 768px) {
+  .testimonials {
+    padding: 50px 0 100px;
+  }
+}
+
+.testimonials__title {
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+  .testimonials__title {
+    margin-bottom: 26px;
+  }
+}
+
+.testimonials__subtitle {
+  margin-bottom: 46px;
+}
+@media screen and (max-width: 768px) {
+  .testimonials__subtitle {
+    margin-bottom: 50px;
+  }
+}
+
+.testimonials__item {
+  width: 360px;
+  background-color: var(--clr-200);
+  padding: 37px;
+  text-align: center;
+  min-height: 370px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .testimonials__item {
+    width: 100%;
+    min-height: 570px;
+    padding: 42px 37px 92px;
+  }
+}
+
+.testimonials__client {
+  text-transform: uppercase;
+  color: var(--clr-203);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+@media screen and (max-width: 768px) {
+  .testimonials__client {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+}
+
 .menu.opened .menu__toggle::before {
   transform: translate(-50%, 0) rotate(45deg);
   top: 50%;
