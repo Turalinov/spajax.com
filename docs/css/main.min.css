@@ -533,11 +533,6 @@ button:focus {
   color: var(--clr-203);
   background-color: var(--clr-200);
 }
-@media screen and (max-width: 768px) {
-  .btn.btn--light {
-    font-size: 12px;
-  }
-}
 .btn.btn--light:hover {
   background-color: var(--clr-210);
 }
@@ -719,6 +714,65 @@ button:focus {
     order: 30;
     max-width: 66px;
     padding: 17px 10px;
+    font-size: 12px;
+  }
+}
+
+.invitation {
+  padding: 110px 0 115px;
+  background-color: rgba(133, 138, 116, 0.3);
+  background-image: url("../img/invitation-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 768px) {
+  .invitation {
+    padding: 290px 0 290px;
+    background-image: url("../img/invitation-bg-mobile.png");
+  }
+}
+
+.invitation__content {
+  position: relative;
+  transform: translateX(50%);
+}
+@media screen and (max-width: 992px) {
+  .invitation__content {
+    transform: translateX(40%);
+  }
+}
+@media screen and (max-width: 768px) {
+  .invitation__content {
+    transform: initial;
+    text-align: center;
+  }
+}
+.invitation__content::before {
+  content: "";
+  position: absolute;
+  top: 152px;
+  left: -52px;
+  width: 105px;
+  height: 14px;
+  background-image: url("../img/line-white.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media screen and (max-width: 768px) {
+  .invitation__content::before {
+    display: none;
+  }
+}
+
+.invitation__title {
+  color: var(--clr-200);
+  margin-bottom: 95px;
+}
+@media screen and (max-width: 768px) {
+  .invitation__title {
+    margin-bottom: 15px;
   }
 }
 
@@ -776,7 +830,6 @@ button:focus {
   flex-direction: column;
   width: 270px;
 }
-
 .experts__img {
   min-width: 270px;
   margin-bottom: 40px;
@@ -816,7 +869,7 @@ button:focus {
 }
 @media screen and (max-width: 768px) {
   .experts__position {
-    margin-bottom: 26px;
+    margin-bottom: 21px;
     order: 20;
     min-height: 50px;
   }
