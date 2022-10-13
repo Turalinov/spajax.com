@@ -329,6 +329,7 @@ template {
   --clr-210: #CFD8B7;
   --clr-gray5: #A1A094;
   --clr-gray6: #CED0C7;
+  --clr-gray-7: #D8D8D8;
 }
 
 *,
@@ -806,6 +807,11 @@ button:focus {
 .contact__content {
   padding: 140px 0 120px;
 }
+@media screen and (max-width: 768px) {
+  .contact__content {
+    padding: 100px 0 100px;
+  }
+}
 
 .contact__tickets {
   display: flex;
@@ -856,11 +862,13 @@ button:focus {
 }
 
 .footer {
+  border-top: 2px solid var(--clr-gray-7);
   padding: 75px 0;
 }
 @media screen and (max-width: 768px) {
   .footer {
     padding: 65px 0 75px;
+    border-top-width: 1px;
   }
 }
 
@@ -1929,6 +1937,25 @@ button:focus {
 
 .preview__img-elem {
   width: 100%;
+}
+
+.question__content {
+  padding: 140px 0 120px;
+}
+@media screen and (max-width: 768px) {
+  .question__content {
+    padding: 100px 0 100px;
+  }
+}
+
+.question__form {
+  max-width: 569px;
+  margin: 0 auto;
+}
+
+.question__form .form__row--btn {
+  display: flex;
+  justify-content: center;
 }
 
 .section__top {
