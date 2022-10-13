@@ -803,6 +803,58 @@ button:focus {
   transition: 0.5s;
 }
 
+.contact__content {
+  padding: 140px 0 120px;
+}
+
+.contact__tickets {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  margin-left: -30px;
+}
+@media screen and (max-width: 992px) {
+  .contact__tickets {
+    margin-top: -30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact__tickets {
+    margin-left: 0;
+  }
+}
+
+.contact__tickets .ticket {
+  width: calc(25% - 30px);
+  margin-left: 30px;
+}
+@media screen and (max-width: 992px) {
+  .contact__tickets .ticket {
+    width: calc(50% - 30px);
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact__tickets .ticket {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.contact__socials {
+  justify-content: center;
+}
+
+.contact__socials .socials__item {
+  width: 48px;
+  height: 48px;
+}
+
+.contact__socials .socials__img {
+  width: 30px;
+  height: 30px;
+}
+
 .footer {
   padding: 75px 0;
 }
@@ -1880,27 +1932,32 @@ button:focus {
 }
 
 .section__top {
+  position: relative;
   padding-top: 126px;
   background-color: var(--clr-panel-menu);
   text-align: center;
 }
+.section__top::before {
+  content: "";
+  position: absolute;
+  bottom: -64px;
+  width: 497px;
+  height: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("../img/section-decor.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 @media screen and (max-width: 768px) {
   .section__top {
     padding-top: 108px;
-    position: relative;
   }
   .section__top::before {
-    content: "";
-    position: absolute;
     bottom: -64px;
     width: 228px;
-    height: 14px;
-    left: 50%;
-    transform: translateX(-50%);
     background-image: url("../img/section-mobile-decor.svg");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
   }
 }
 
@@ -2180,6 +2237,10 @@ button:focus {
   }
 }
 
+.ticket__text p + p {
+  margin-top: 8px;
+}
+
 .ticket__link {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -2218,12 +2279,16 @@ button:focus {
 }
 
 @media screen and (max-width: 768px) {
-  .ticket__link--phone {
+  .ticket--phone .ticket__link {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 470px) {
-  .ticket__link--phone {
+  .ticket--phone .ticket__link {
     font-size: 12px;
   }
+}
+
+.ticket--email .ticket__link {
+  text-transform: lowercase;
 }
