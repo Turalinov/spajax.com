@@ -2420,6 +2420,7 @@ button:focus {
 }
 
 .prices__subtitle {
+  text-transform: capitalize;
   margin-bottom: 50px;
 }
 
@@ -2561,6 +2562,10 @@ button:focus {
 .service__text ul + p {
     margin-top: 40px;
   }
+}
+
+.service__text h3 + p {
+  margin-top: 12px;
 }
 
 .service__text ul li {
@@ -3070,7 +3075,17 @@ button:focus {
   }
 }
 
+.types__elem p + p {
+  margin-top: 30px;
+}
+@media screen and (max-width: 768px) {
+  .types__elem p + p {
+    margin-top: 20px;
+  }
+}
+
 .types__title {
+  text-transform: capitalize;
   margin-bottom: 10px;
 }
 @media screen and (max-width: 768px) {
