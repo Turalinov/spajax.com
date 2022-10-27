@@ -932,8 +932,9 @@ button:focus {
 }
 
 .cards__item {
+  display: flex;
+  align-items: flex-start;
   position: relative;
-  height: auto;
   transition: 0.5s;
   width: calc(20% - 25px);
   margin-left: 25px;
@@ -997,6 +998,8 @@ button:focus {
 }
 
 .cards__img {
+  display: flex;
+  align-items: flex-start;
   max-width: 100%;
 }
 
@@ -1124,12 +1127,23 @@ button:focus {
 
 .facts__content {
   text-align: center;
-  max-width: 830px;
+  max-width: 890px;
   margin: 0 auto;
 }
 
 .facts__content p + p {
   margin-top: 30px;
+}
+
+.facts__content h3 + p,
+.facts__content h3 + ul {
+  margin-top: 50px;
+}
+
+.facts__content ul {
+  max-width: 376px;
+  margin: 0 auto;
+  text-align: initial;
 }
 
 .footer {
@@ -2432,6 +2446,11 @@ button:focus {
 .prices__table {
   margin-bottom: 32px;
 }
+@media screen and (max-width: 768px) {
+  .prices__table {
+    font-size: 14px;
+  }
+}
 
 .prices__info {
   text-align: center;
@@ -2510,6 +2529,10 @@ button:focus {
   }
 }
 
+.service--non-decor .section__top::before {
+  display: none;
+}
+
 .service__content {
   padding: 120px 0 115px;
 }
@@ -2564,20 +2587,43 @@ button:focus {
   }
 }
 
+.service__text p + h3 {
+  margin-top: 40px;
+}
+
+.service__text p + h5 {
+  margin-top: 20px;
+}
+
 .service__text h3 + p {
   margin-top: 12px;
 }
+@media screen and (max-width: 768px) {
+  .service__text h3 + p {
+    margin-top: 25px;
+  }
+}
 
-.service__text ul li {
+.service__text h5 + p {
+  margin-top: 5px;
+}
+
+.service__text ul li,
+.types__elem ul li,
+.facts__content ul li {
   position: relative;
   padding-left: 25px;
 }
 @media screen and (max-width: 768px) {
-  .service__text ul li {
+  .service__text ul li,
+.types__elem ul li,
+.facts__content ul li {
     padding-left: 23px;
   }
 }
-.service__text ul li::before {
+.service__text ul li::before,
+.types__elem ul li::before,
+.facts__content ul li::before {
   content: "";
   position: absolute;
   top: 2px;
@@ -2590,7 +2636,9 @@ button:focus {
   background-position: center;
 }
 @media screen and (max-width: 768px) {
-  .service__text ul li::before {
+  .service__text ul li::before,
+.types__elem ul li::before,
+.facts__content ul li::before {
     top: 6px;
     width: 10px;
     height: 10px;
@@ -2627,6 +2675,17 @@ button:focus {
 @media screen and (max-width: 768px) {
   .service__img::before {
     display: none;
+  }
+}
+
+.service__img--horizontal {
+  width: 345px;
+  height: 270px;
+}
+@media screen and (max-width: 768px) {
+  .service__img--horizontal {
+    width: 100%;
+    height: 280px;
   }
 }
 
@@ -2899,21 +2958,46 @@ button:focus {
   padding-top: 18px;
   border-top: 4px solid var(--clr-gray6);
 }
+@media screen and (max-width: 768px) {
+  .table-elem tr:first-child td {
+    padding-top: 12px;
+  }
+}
 
 .table-elem tr:last-child td {
   padding-bottom: 14px;
+}
+@media screen and (max-width: 768px) {
+  .table-elem tr:last-child td {
+    padding-bottom: 12px;
+  }
 }
 
 .table-elem td:first-child {
   padding-left: 32px;
 }
+@media screen and (max-width: 768px) {
+  .table-elem td:first-child {
+    padding-left: 12px;
+  }
+}
 
 .table-elem td:last-child {
   padding-left: 32px;
 }
+@media screen and (max-width: 768px) {
+  .table-elem td:last-child {
+    padding-left: 12px;
+  }
+}
 
 .table-elem td:last-child {
   padding-right: 32px;
+}
+@media screen and (max-width: 768px) {
+  .table-elem td:last-child {
+    padding-right: 12px;
+  }
 }
 
 .table-elem {
@@ -3045,6 +3129,15 @@ button:focus {
   }
 }
 
+.types--first {
+  padding: 100px 0 50px;
+}
+@media screen and (max-width: 768px) {
+  .types--first {
+    padding: 90px 0 10px;
+  }
+}
+
 .types__item {
   padding: 48px 0 53px;
   display: flex;
@@ -3075,11 +3168,13 @@ button:focus {
   }
 }
 
-.types__elem p + p {
+.types__elem p + p,
+.types__elem p + ul {
   margin-top: 30px;
 }
 @media screen and (max-width: 768px) {
-  .types__elem p + p {
+  .types__elem p + p,
+.types__elem p + ul {
     margin-top: 20px;
   }
 }
