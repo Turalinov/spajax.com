@@ -542,6 +542,128 @@ button:focus {
   margin-top: 50px;
 }
 
+.additional {
+  padding: 70px 0;
+}
+@media screen and (max-width: 768px) {
+  .additional {
+    padding: 30px 0 90px;
+  }
+}
+
+.additional h4, .additional h5,
+.faq h4, .faq h5,
+.service h4, .service h5,
+.needs h4, .needs h5 {
+  color: var(--clr-black);
+}
+
+.additional__content {
+  position: relative;
+}
+.additional__content::before {
+  content: "";
+  position: absolute;
+  bottom: -64px;
+  width: 497px;
+  height: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url(../img/section-decor.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 768px) {
+  .additional__content::before {
+    width: 228px;
+    background-image: url(../img/section-mobile-decor.svg);
+  }
+}
+
+.additional__top {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .additional__top {
+    flex-direction: column;
+    align-items: initial;
+  }
+}
+
+.additional__bottom {
+  margin-top: 40px;
+}
+@media screen and (max-width: 768px) {
+  .additional__bottom {
+    margin-top: 35px;
+  }
+}
+
+.additional__bottom p + h5,
+.additional__bottom ul + h5,
+.additional__bottom h5 + ul,
+.additional__bottom p + ul,
+.additional__bottom p + p {
+  margin-top: 20px;
+}
+@media screen and (max-width: 768px) {
+  .additional__bottom p + h5,
+.additional__bottom ul + h5,
+.additional__bottom h5 + ul,
+.additional__bottom p + ul,
+.additional__bottom p + p {
+    margin-top: 25px;
+  }
+}
+
+.additional__bottom h5 + p {
+  margin-top: 10px;
+}
+@media screen and (max-width: 768px) {
+  .additional__bottom h5 + p {
+    margin-top: 15px;
+  }
+}
+
+.additional__elem:first-child {
+  flex: 1;
+}
+@media screen and (max-width: 768px) {
+  .additional__elem:first-child {
+    flex: initial;
+  }
+}
+
+.additional__elem h3 + p {
+  margin-top: 12px;
+}
+@media screen and (max-width: 768px) {
+  .additional__elem h3 + p {
+    margin-top: 17px;
+  }
+}
+
+.additional__img {
+  width: 345px;
+  height: 270px;
+  margin-left: 100px;
+}
+@media screen and (max-width: 768px) {
+  .additional__img {
+    width: 100%;
+    height: 280px;
+    margin-left: 0;
+    margin-top: 40px;
+  }
+}
+
+.additional__img-elem {
+  object-fit: cover;
+  width: 100%;
+}
+
 .appointment {
   padding: 64px 0 86px;
   background-image: url("../img/appointment.png");
@@ -1146,6 +1268,69 @@ button:focus {
   text-align: initial;
 }
 
+.faq {
+  padding: 50px 0;
+}
+@media screen and (max-width: 768px) {
+  .faq {
+    padding: 30px 0;
+  }
+}
+
+.faq__title {
+  text-align: center;
+  max-width: 550px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+}
+
+.faq__content {
+  display: flex;
+  margin: 0 -15px;
+}
+@media screen and (max-width: 768px) {
+  .faq__content {
+    flex-direction: column;
+    margin: 0px;
+  }
+}
+
+.faq__elem {
+  flex: 1;
+  margin: 0 15px;
+}
+@media screen and (max-width: 768px) {
+  .faq__elem {
+    flex: initial;
+    margin: 0px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .faq__elem + .faq__elem {
+    margin-top: 30px;
+  }
+}
+
+.faq__item + .faq__item {
+  margin-top: 40px;
+}
+@media screen and (max-width: 768px) {
+  .faq__item + .faq__item {
+    margin-top: 30px;
+  }
+}
+
+.faq__item h5 + p {
+  margin-top: 10px;
+}
+
+.faq__item p + p,
+.faq__item p + ul,
+.faq__item ul + p {
+  margin-top: 20px;
+}
+
 .footer {
   border-top: 2px solid var(--clr-gray-7);
   padding: 75px 0;
@@ -1600,6 +1785,23 @@ button:focus {
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
+}
+
+.list__elem {
+  display: flex;
+}
+
+.list__elem div:first-child {
+  flex: 1 1 270px;
+}
+
+.list__elem div:nth-child(2) {
+  flex: 1 1 160px;
+  text-align: center;
+}
+
+.list__elem div:last-child {
+  flex: 1 1 249px;
 }
 
 .logo {
@@ -2224,6 +2426,73 @@ button:focus {
   visibility: visible;
 }
 
+.needs {
+  padding: 50px 0;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .needs {
+    padding: 30px 0;
+    text-align: initial;
+  }
+}
+
+.needs__title {
+  margin-bottom: 35px;
+}
+@media screen and (max-width: 768px) {
+  .needs__title {
+    margin-bottom: 30px;
+  }
+}
+
+.needs__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 65px;
+  margin-top: -34px;
+}
+@media screen and (max-width: 768px) {
+  .needs__list {
+    margin-top: -30px;
+  }
+}
+
+.needs__text {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.needs__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 269px;
+  margin-top: 34px;
+}
+@media screen and (max-width: 768px) {
+  .needs__item {
+    flex: 1 1 189px;
+    margin-top: 30px;
+  }
+}
+
+.needs__img {
+  width: 66px;
+  height: 66px;
+}
+
+.needs__img-elem {
+  width: 100%;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .needs__desc {
+    font-size: 18px;
+  }
+}
+
 .pagination {
   display: flex;
   justify-content: space-between;
@@ -2610,20 +2879,29 @@ button:focus {
 
 .service__text ul li,
 .types__elem ul li,
-.facts__content ul li {
+.facts__content ul li,
+.faq__item ul li,
+.additional__bottom ul li,
+.thesis__content ul li {
   position: relative;
   padding-left: 25px;
 }
 @media screen and (max-width: 768px) {
   .service__text ul li,
 .types__elem ul li,
-.facts__content ul li {
+.facts__content ul li,
+.faq__item ul li,
+.additional__bottom ul li,
+.thesis__content ul li {
     padding-left: 23px;
   }
 }
 .service__text ul li::before,
 .types__elem ul li::before,
-.facts__content ul li::before {
+.facts__content ul li::before,
+.faq__item ul li::before,
+.additional__bottom ul li::before,
+.thesis__content ul li::before {
   content: "";
   position: absolute;
   top: 2px;
@@ -2638,7 +2916,10 @@ button:focus {
 @media screen and (max-width: 768px) {
   .service__text ul li::before,
 .types__elem ul li::before,
-.facts__content ul li::before {
+.facts__content ul li::before,
+.faq__item ul li::before,
+.additional__bottom ul li::before,
+.thesis__content ul li::before {
     top: 6px;
     width: 10px;
     height: 10px;
@@ -3007,6 +3288,16 @@ button:focus {
 .table td {
   vertical-align: top;
   border-right: 1px solid var(--clr-gray6);
+}
+
+.thesis__content {
+  max-width: 766px;
+  margin: 0 auto;
+}
+
+.thesis__content p + ul {
+  max-width: 430px;
+  margin: 20px auto;
 }
 
 .ticket {
