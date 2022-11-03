@@ -510,6 +510,12 @@ button:focus {
   outline: none;
 }
 
+button:disabled,
+button[disabled] {
+  background-color: var(--clr-210);
+  color: var(--clr-203);
+}
+
 .container {
   margin: 0 auto;
   height: 100%;
@@ -525,6 +531,12 @@ button:focus {
     margin: 0 33px;
   }
 }
+@media screen and (max-width: 460px) {
+  .container {
+    margin: 0 15px;
+  }
+}
+
 .error__subtitle {
   margin-bottom: 30px;
 }
@@ -1582,6 +1594,20 @@ button:focus {
   }
 }
 
+input.form__input.error {
+  border-bottom: 0.7px solid #f88c8c;
+}
+
+#form__error {
+  color: #f88c8c;
+  padding: 17px 20px 0px 0px;
+}
+@media screen and (max-width: 768px) {
+  #form__error {
+    padding: 20px 20px 0px 0px;
+  }
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
@@ -1789,23 +1815,6 @@ button:focus {
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
-}
-
-.list__elem {
-  display: flex;
-}
-
-.list__elem div:first-child {
-  flex: 1 1 270px;
-}
-
-.list__elem div:nth-child(2) {
-  flex: 1 1 160px;
-  text-align: center;
-}
-
-.list__elem div:last-child {
-  flex: 1 1 249px;
 }
 
 .logo {
@@ -3366,6 +3375,131 @@ button:focus {
   border-right: 1px solid var(--clr-gray6);
 }
 
+.tbl {
+  display: table;
+  border-collapse: collapse;
+}
+@media screen and (max-width: 768px) {
+  .tbl {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .tbl {
+    font-size: 12px;
+  }
+}
+
+.tbl .tbody {
+  display: table-row-group;
+}
+
+.tbl .row {
+  border-bottom: 24px solid transparent;
+  display: table-row;
+}
+
+.tbl .cell {
+  display: table-cell;
+}
+
+.tbl .cell:first-child {
+  width: 30%;
+}
+@media screen and (max-width: 768px) {
+  .tbl .cell:first-child {
+    width: 108px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .tbl .cell:first-child {
+    width: 33%;
+  }
+}
+
+.tbl .cell:nth-child(2) {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  width: 40%;
+  vertical-align: top;
+  text-align: center;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .tbl .cell:nth-child(2) {
+    width: 137px;
+    padding: 0 35px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .tbl .cell:nth-child(2) {
+    width: 33%;
+    padding: 0 10px;
+  }
+}
+.tbl .cell:nth-child(2)::before, .tbl .cell:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  width: 19px;
+  height: 6px;
+  background-image: url("../img/arrow-black-right.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 460px) {
+  .tbl .cell:nth-child(2)::before, .tbl .cell:nth-child(2)::after {
+    display: none;
+  }
+}
+.tbl .cell:nth-child(2)::before {
+  left: 37px;
+}
+@media screen and (max-width: 768px) {
+  .tbl .cell:nth-child(2)::before {
+    left: 7px;
+  }
+}
+.tbl .cell:nth-child(2)::after {
+  right: 37px;
+}
+@media screen and (max-width: 768px) {
+  .tbl .cell:nth-child(2)::after {
+    right: 10px;
+  }
+}
+
+.tbl .cell:last-child {
+  width: 30%;
+}
+@media screen and (max-width: 768px) {
+  .tbl .cell:last-child {
+    width: 113px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .tbl .cell:last-child {
+    width: 33%;
+  }
+}
+
+.thesis {
+  padding: 0 0 20px;
+  position: relative;
+}
+.thesis::before {
+  content: "";
+  position: absolute;
+  max-width: 471px;
+  width: 100%;
+  height: 1px;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--clr-203);
+}
+
 .thesis__content {
   max-width: 766px;
   margin: 0 auto;
@@ -3373,7 +3507,26 @@ button:focus {
 
 .thesis__content p + ul {
   max-width: 430px;
-  margin: 20px auto;
+  margin: 20px auto 25px;
+}
+
+.thesis__tbl {
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .thesis__tbl::before {
+    content: "";
+    position: absolute;
+    bottom: -24px;
+    width: 228px;
+    height: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url("../img/section-mobile-decor.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }
 
 .ticket {
@@ -3553,5 +3706,15 @@ button:focus {
 @media screen and (max-width: 768px) {
   .types__title {
     margin-bottom: 19px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .types__content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
 }
