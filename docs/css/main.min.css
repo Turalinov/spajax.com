@@ -3716,5 +3716,33 @@ input.form__input.error {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    transition: 0.3s;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .types__content.open {
+    overflow: initial;
+    text-overflow: initial;
+    display: initial;
+    -webkit-line-clamp: initial;
+    -webkit-box-orient: initial;
+  }
+}
+
+.types__link {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .types__link {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 12px;
+    display: block;
+    text-align: right;
+    margin-top: 22px;
+    color: var(--clr-203);
   }
 }
